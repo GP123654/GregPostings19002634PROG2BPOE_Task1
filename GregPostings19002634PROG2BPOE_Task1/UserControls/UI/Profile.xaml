@@ -1,0 +1,114 @@
+﻿<!-- 
+    * TIME MANAGEMENT APPLICATION
+    * 
+    * Done By: Greg Postings 19002634
+    * Class: BCA2 G1
+    * Module: PROG 2B
+    *
+    * POE TASK 1
+    * Start Date and Time: 8 August 2021 at 14:25
+    * End Date and Time: 20 September 2021 at 15:35
+    * 
+    * POE TASK 2
+    * Start Date and Time: 5 OCtober 2021 at 16:25
+    * End Date and Time: 26 OCtober 2021 at 13:50
+    -->
+    
+<UserControl x:Class="GregPostings19002634PROG2BPOE_Task1.UserControls.UI.Profile"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:GregPostings19002634PROG2BPOE_Task1.UserControls.UI"
+             mc:Ignorable="d" 
+             d:DesignHeight="620" d:DesignWidth="850">
+
+    <!-- Main Container -->
+    <Grid>
+        <Grid>
+            <!-- Row Definitions -->
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <!-- Column Definitions -->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Heading -->
+            <Label Content="PROFILE" Foreground="#FF08FFE9" FontSize="20" FontWeight="Bold" Grid.Column="3" Grid.ColumnSpan="2" VerticalAlignment="Center"/>
+
+            <!-- Profile Picture -->
+            <Image Source="D:\BCAD2\Semester 2\PROG 2B\POE\Task 1\GregPostings19002634PROG2BPOE_Task1\GregPostings19002634PROG2BPOE_Task1\Icons\Profile.png" Width="60" Height="60" Grid.Row="1"/>
+
+            <!-- Lables -->
+
+            <!--#region Lables -->
+
+            <!-- Lables -->
+            <Label Content="Name:" Foreground="White" FontSize="14" Height="28" Width="90" VerticalContentAlignment="Center"  Grid.Row="2" HorizontalAlignment="Center"/>
+            <Label Content="Surname:" Foreground="White" FontSize="14" Height="28" Width="90" VerticalContentAlignment="Center" Grid.Row="3" HorizontalAlignment="Center"/>
+            <Label Content="Email Address:" Foreground="White" FontSize="14" Height="28" Width="90" VerticalContentAlignment="Center" Grid.Row="4" HorizontalAlignment="Center"/>
+            <Label Content="Birthday:" Foreground="White" FontSize="14" Height="28" Width="90" VerticalContentAlignment="Center" Grid.Row="5" HorizontalAlignment="Center"/>
+            <Label Content="Gender:" Foreground="White" FontSize="14" Height="28" Width="90" VerticalContentAlignment="Center"  Grid.Row="2" HorizontalAlignment="Center" Grid.Column="2"/>
+            <Label Content="Education Level:" Foreground="White" FontSize="14" Height="28" Width="110" VerticalContentAlignment="Center" Grid.Row="3" HorizontalAlignment="Center" Grid.Column="2"/>
+            <Label Content="Country:" Foreground="White" FontSize="14" Height="28" Width="90" VerticalContentAlignment="Center" Grid.Row="4" HorizontalAlignment="Center" Grid.Column="2"/>
+            <Label Content="Language:" Foreground="White" FontSize="14" Height="28" Width="90" VerticalContentAlignment="Center" Grid.Row="5" HorizontalAlignment="Center" Grid.Column="2"/>
+
+            <!-- #endregion -->
+
+            <!-- User Input Areas -->
+
+            <!-- #region User Input -->
+
+            <!-- Text Boxes -->
+            <TextBox Style="{StaticResource textBoxBlueTheme}" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" MinWidth="130" MaxWidth="250"></TextBox>
+            <TextBox Style="{StaticResource textBoxBlueTheme}" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" MinWidth="130" MaxWidth="250"></TextBox>
+            <TextBox Style="{StaticResource textBoxBlueTheme}" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" MinWidth="130" MaxWidth="250"></TextBox>
+            <!-- Date Picker -->
+            <DatePicker Grid.Column="1" Grid.Row="5" VerticalAlignment="Center" SelectedDateFormat="Long" Margin="0,0,5,0" Foreground="#FFAB57FF" BorderBrush="#FF00DCFF" Background="Black" MinWidth="130" MaxWidth="250"/>
+
+            <!-- Combo Boxes -->
+            <ComboBox Background="Black" BorderBrush="#FF00DCFF" Foreground="#FFAB57FF" ToolTip="Select Your Gender" Grid.Row="2" Grid.Column="3" Margin="0,0,10,0" MinWidth="130" MaxWidth="250">
+                <ComboBoxItem Background="#FF232323" Content="Male"/>
+                <ComboBoxItem Background="#FF232323" Content="Female"/>
+                <ComboBoxItem Background="#FF232323" Content="Other"/>
+            </ComboBox>
+
+            <ComboBox Background="Black" BorderBrush="#FF00DCFF" Foreground="#FFAB57FF" ToolTip="Select Your Education Level" Grid.Row="3" Grid.Column="3" Margin="0,0,10,0" MinWidth="130" MaxWidth="250">
+                <ComboBoxItem Background="#FF232323" Content="Primary School"/>
+                <ComboBoxItem Background="#FF232323" Content="High School"/>
+                <ComboBoxItem Background="#FF232323" Content="University / College"/>
+            </ComboBox>
+
+            <ComboBox Background="Black" BorderBrush="#FF00DCFF" Foreground="#FFAB57FF" ToolTip="Select Your Country" Grid.Row="4" Grid.Column="3" Margin="0,0,10,0" MinWidth="130" MaxWidth="250">
+                <ComboBoxItem Background="#FF232323" Content="South Africa"/>
+                <ComboBoxItem Background="#FF232323" Content="Other"/>
+            </ComboBox>
+
+            <ComboBox Background="Black" BorderBrush="#FF00DCFF" Foreground="#FFAB57FF" ToolTip="Select Your Language" Grid.Row="5" Grid.Column="3" Margin="0,0,10,0" MinWidth="130" MaxWidth="250">
+                <ComboBoxItem Background="#FF232323" Content="English"/>
+                <ComboBoxItem Background="#FF232323" Content="Afrikaans"/>
+                <ComboBoxItem Background="#FF232323" Content="Xhosa"/>
+                <ComboBoxItem Background="#FF232323" Content="Other"/>
+            </ComboBox>
+
+            <!-- #endregion -->
+
+            <!-- Buttons -->
+            <Button Content="Change Profile Picture" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" Width="175"/>
+            <Button Content="Save Changes" Grid.Column="3" Grid.Row="6" VerticalAlignment="Center" Width="120"/>
+
+        </Grid>
+    </Grid>
+</UserControl>
+<!--/////////////////////////// END OF WINDOW ///////////////////////////-->

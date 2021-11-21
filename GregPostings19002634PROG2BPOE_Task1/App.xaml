@@ -1,0 +1,88 @@
+﻿<!-- 
+    * TIME MANAGEMENT APPLICATION
+    * 
+    * Done By: Greg Postings 19002634
+    * Class: BCA2 G1
+    * Module: PROG 2B
+    *
+    * POE TASK 1
+    * Start Date and Time: 8 August 2021 at 14:25
+    * End Date and Time: 20 September 2021 at 15:35
+    * 
+    * POE TASK 2
+    * Start Date and Time: 5 OCtober 2021 at 16:25
+    * End Date and Time: 26 OCtober 2021 at 13:50
+    -->
+
+<Application x:Class="GregPostings19002634PROG2BPOE_Task1.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:GregPostings19002634PROG2BPOE_Task1"
+             xmlns:viewModel="clr-namespace:GregPostings19002634PROG2BPOE_Task1.UserControls.Classes"
+             xmlns:view="clr-namespace:GregPostings19002634PROG2BPOE_Task1.UserControls.UI"
+             StartupUri="MainWindow.xaml">
+    
+    <!-- Application Resources -->
+    
+    <!-- #region Application Resources -->
+    <Application.Resources>
+        <!-- Resource Dictionary -->
+        <ResourceDictionary>
+
+            <!-- Custom themes and styles in a resource dictionary -->
+
+            <!-- #region Themes and Styles Resource Dictionary -->
+
+            <ResourceDictionary.MergedDictionaries>
+
+                <!-- My Themes -->
+                <ResourceDictionary Source="ThemesAndStyles/DefaultBlueTheme.xaml"/>
+
+                <!-- Material Design Themes -->
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.DeepPurple.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Lime.xaml" />
+
+            </ResourceDictionary.MergedDictionaries>
+
+            <!-- #endregion -->
+
+            <!-- User Control Things -->
+
+            <!-- #region User Control Things -->
+
+            <!-- -->
+            <DataTemplate DataType="{x:Type viewModel:HomeControl}">
+                <view:Home/>
+            </DataTemplate>
+
+            <!-- -->
+            <DataTemplate DataType="{x:Type viewModel:ProfileControl}">
+                <view:Profile/>
+            </DataTemplate>
+
+            <!-- -->
+            <DataTemplate DataType="{x:Type viewModel:SettingsControl}">
+                <view:Settings/>
+            </DataTemplate>
+
+            <!-- -->
+            <DataTemplate DataType="{x:Type viewModel:EditControl}">
+                <view:Edit/>
+            </DataTemplate>
+
+            <!-- -->
+            <DataTemplate DataType="{x:Type viewModel:CalendarControl}">
+                <view:Calendar/>
+            </DataTemplate>
+
+            <!-- #endregion -->
+
+        </ResourceDictionary>
+    </Application.Resources>
+    
+    <!--#endregion-->
+    
+</Application>
+<!--/////////////////////////// END OF WINDOW ///////////////////////////-->

@@ -1,0 +1,89 @@
+﻿<!-- 
+    * TIME MANAGEMENT APPLICATION
+    * 
+    * Done By: Greg Postings 19002634
+    * Class: BCA2 G1
+    * Module: PROG 2B
+    *
+    * POE TASK 1
+    * Start Date and Time: 8 August 2021 at 14:25
+    * End Date and Time: 20 September 2021 at 15:35
+    * 
+    * POE TASK 2
+    * Start Date and Time: 5 OCtober 2021 at 16:25
+    * End Date and Time: 26 OCtober 2021 at 13:50
+    -->
+    
+<UserControl x:Class="GregPostings19002634PROG2BPOE_Task1.UserControls.UI.Settings"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:GregPostings19002634PROG2BPOE_Task1.UserControls.UI"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid>
+            <!-- Row Defenitions -->
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <!-- Column Definitions -->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Heading -->
+            <Label Content="SETTINGS" Foreground="#FF08FFE9" FontSize="20" FontWeight="Bold" Grid.Column="6" Grid.ColumnSpan="2" VerticalAlignment="Center"/>
+
+            <!-- Control Lables -->
+            
+            <!-- #region Lables For Controls -->
+            
+            <!-- Lables -->
+            <Label Content="Text Size:" Height="25" FontSize="15" Foreground="White" Grid.Row="2" Grid.Column="1"></Label>
+            <Label Content="Text Size:" Height="25" FontSize="15" Foreground="White" Grid.Row="3" Grid.Column="1"></Label>
+            <Label Content="Notifications:" Height="25" FontSize="15" Foreground="White" Grid.Row="4" Grid.Column="1"></Label>
+            <Label Content="Set Reminders:" Height="25" FontSize="14" Foreground="White" Grid.Row="5" Grid.Column="1"></Label>
+            <Label Content="Text Size:" Height="25" FontSize="15" Foreground="White" Grid.Row="2" Grid.Column="4"></Label>
+            <Label Content="Change Theme:" Height="32" FontSize="18" Foreground="White" Grid.Row="3" Grid.Column="4" Grid.ColumnSpan="2"></Label>
+
+            <!-- #endregion -->
+            
+            <!-- Settings Controls -->
+            
+            <!-- #region Controls For Settings -->
+            
+            <!-- Toggle Buttons / Switches -->
+            <ToggleButton Style="{StaticResource MaterialDesignSwitchToggleButton}" ToolTip="Default ToggleButton Style" Grid.Row="2" Grid.Column="2"/>
+            <ToggleButton Style="{StaticResource MaterialDesignSwitchToggleButton}" ToolTip="Default ToggleButton Style" Grid.Row="3" Grid.Column="2"/>
+            <ToggleButton Style="{StaticResource MaterialDesignSwitchToggleButton}" ToolTip="Default ToggleButton Style" Grid.Row="4" Grid.Column="2"/>
+
+            <!-- Check Box And Slider -->
+            <Slider Grid.Column="5" Grid.Row="2" Grid.ColumnSpan="2" MinWidth="80" VerticalAlignment="Center"/>
+            <CheckBox Grid.Row="5" Grid.Column="2" Style="{StaticResource MaterialDesignCheckBox}" HorizontalAlignment="Center" />
+            
+            <!-- Radio Buttons -->
+            <RadioButton IsChecked="False" Content="Light" Style="{StaticResource MaterialDesignDarkRadioButton}" Foreground="#FFFBFBFB" Grid.Row="4" Grid.Column="5" />
+            <RadioButton IsChecked="True" Content="Dark" Style="{StaticResource MaterialDesignDarkRadioButton}" Foreground="#FFFBFBFB" Grid.Row="5" Grid.Column="5" />
+            <RadioButton IsChecked="False" Content="Custom" Style="{StaticResource MaterialDesignDarkRadioButton}" Foreground="#FFFBFBFB" Grid.Row="6" Grid.Column="5" />
+            
+            <!-- #endregion -->
+            
+        </Grid>
+    </Grid>
+</UserControl>
+<!--/////////////////////////// END OF WINDOW ///////////////////////////-->

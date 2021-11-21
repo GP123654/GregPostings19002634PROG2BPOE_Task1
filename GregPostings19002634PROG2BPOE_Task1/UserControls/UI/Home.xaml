@@ -1,0 +1,183 @@
+﻿<!-- 
+    * TIME MANAGEMENT APPLICATION
+    * 
+    * Done By: Greg Postings 19002634
+    * Class: BCA2 G1
+    * Module: PROG 2B
+    *
+    * POE TASK 1
+    * Start Date and Time: 8 August 2021 at 14:25
+    * End Date and Time: 20 September 2021 at 15:35
+    * 
+    * POE TASK 2
+    * Start Date and Time: 5 OCtober 2021 at 16:25
+    * End Date and Time: 26 OCtober 2021 at 13:50
+    -->
+
+<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:GregPostings19002634PROG2BPOE_Task1.UserControls.UI"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="GregPostings19002634PROG2BPOE_Task1.UserControls.UI.Home"                
+             mc:Ignorable="d" 
+             d:DesignHeight="620" d:DesignWidth="850" Loaded="UserControl_Loaded">
+
+    <!-- Main Container -->
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <!-- Row Definitions -->
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <!-- Column Definitions -->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Search bar // Code taken from the material design toolkit demo and changed by me -->
+
+            <!-- #region Search Bar -->
+            <materialDesign:ColorZone
+                            Mode="Standard"
+                            Padding="8 4 8 4"
+                            CornerRadius="2"
+                            Panel.ZIndex="1"
+                            Margin="0"
+                            materialDesign:ShadowAssist.ShadowDepth="Depth1" Background="Black" Grid.ColumnSpan="2" VerticalAlignment="Center" Grid.Column="2" MaxWidth="500">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <Button Style="{DynamicResource MaterialDesignToolButton}" ToolTip="Search">
+                        <materialDesign:PackIcon Kind="Search" Opacity=".8" Foreground="#FF00F3FF"/>
+                    </Button>
+
+                    <TextBox
+                                    Grid.Column="1"
+                                    Margin="8 0 0 0"
+                                    materialDesign:HintAssist.Hint="Search For Something..." 
+                                    materialDesign:TextFieldAssist.DecorationVisibility="Hidden"
+                                    BorderThickness="0"
+                                    MinWidth="200"
+                                    VerticalAlignment="Center" SelectionBrush="#FF6200D7" CaretBrush="#FF9A1AE4" Foreground="#DDCDC9C9"/>
+
+                    <Button Style="{DynamicResource MaterialDesignToolButton}" Grid.Column="2" ToolTip="Speach to Text">
+                        <materialDesign:PackIcon Kind="Microphone" Opacity=".8" Margin="8 0 0 0" Foreground="#FF00F3FF"/>
+                    </Button>
+                </Grid>
+            </materialDesign:ColorZone>
+            <!-- #endregion -->
+
+            <!-- Singned in user // Code taken from the material design toolkit demo and changed by me-->
+
+            <!--#region Singned in user -->
+            <StackPanel x:Name="SignedInUserStackPanel" Width="Auto" Grid.Column="5" VerticalAlignment="Center" Height="40" MaxWidth="180" ToolTip="Greg is currently signed in">
+                <materialDesign:Chip x:Name="SignedInUser" Content="Greg Postings" Height="40" Foreground="White" Background="#7F000000" HorizontalAlignment="Stretch">
+                    <materialDesign:Chip.Icon>
+                        <materialDesign:PackIcon Kind="Account" Width="25" Height="25"/>
+                        <!--<Image Source="Icons\Profile.png" Width="20" Height="20"/>-->
+                        <!--Would have to create a binding on the image-->
+                    </materialDesign:Chip.Icon>
+                </materialDesign:Chip>
+            </StackPanel>
+            <!-- #endregion -->
+
+            
+            <!-- Notifications Button -->
+            <Button Style="{DynamicResource MaterialDesignToolButton}" ToolTip="Notifications" Grid.Column="4" HorizontalAlignment="Center" Width="35" Height="35">
+                <materialDesign:PackIcon Kind="Bell" Opacity=".8" Foreground="#FF00F3FF" Width="20" Height="20"/>
+            </Button>
+
+            <!-- Rate Our App -->
+            <Label Content="Rate our App:" Foreground="White" Grid.Row="8" Grid.Column="5" Height="30" VerticalAlignment="Center" FontWeight="Bold" FontSize="14"></Label>
+            <materialDesign:RatingBar Margin="0,0,0,6" VerticalAlignment="Bottom" Background="White" Foreground="#FF008BFF" Grid.Row="8" Grid.Column="5"/>
+
+            <!-- The Line Chart -->
+            <Grid x:Name="ModuleChart" Grid.Row="5" Grid.RowSpan="3" Grid.ColumnSpan="5" Grid.Column="1"/>
+
+            <!-- Colourful Squre Left -->
+            
+            <!--#region Colourful Square Left -->
+
+            <!-- Left Colourful Square Container -->
+            <Grid Grid.Row="2" Grid.RowSpan="2" Grid.ColumnSpan="2" Grid.Column="1">
+                <!-- Column Definitions -->
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <!-- Row Definitions -->
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF1480EC" Offset="0"/>
+                        <GradientStop Color="#FF4B28C5" Offset="1"/>
+                    </LinearGradientBrush>
+                </Grid.Background>
+
+                <Label Content="Time Spent On App:" FontSize="18" FontWeight="Bold" Grid.ColumnSpan="3"></Label>
+                <materialDesign:PackIcon Kind="Timer" Width="50" Height="50" Grid.Row="2"></materialDesign:PackIcon>
+                <materialDesign:PackIcon Kind="TimerSand" Width="50" Height="50" Grid.Row="1" Grid.Column="3"></materialDesign:PackIcon>
+                <TextBlock Text="1:25:30" Height="30" Width="80" FontSize="22" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"></TextBlock>
+            </Grid>
+
+            <!-- #endregion -->
+            
+            <!-- Colourful Squre Right -->
+
+            <!--#region Colourful Square Right -->
+
+            <!-- Right Colourful Square Container -->
+            <Grid Grid.Row="2" Grid.RowSpan="2" Grid.ColumnSpan="2" Grid.Column="4">
+                <!-- Column Definitions -->
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <!-- Row Definitions -->
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF7126A6" Offset="0"/>
+                        <GradientStop Color="#FF600EEE" Offset="1"/>
+                    </LinearGradientBrush>
+                </Grid.Background>
+            </Grid>
+
+            <!-- #endregion -->
+            
+        </Grid>
+    </Grid>
+</UserControl>
+<!--/////////////////////////// END OF WINDOW ///////////////////////////-->
